@@ -1,6 +1,7 @@
 package com.example.hands_on_java_springboot_jdbc.usecase;
 
 import com.example.hands_on_java_springboot_jdbc.domain.CreatedArticle;
+import com.example.hands_on_java_springboot_jdbc.util.ValidationErrorException;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
@@ -15,9 +16,9 @@ public interface ShowArticleUseCase {
     @Getter
     @EqualsAndHashCode(callSuper = false)
     static final class CreatedArticleValidationErrors extends ShowArticleUseCaseException {
-        private final CreatedArticleValidationErrors validationErrors;
+        private final ValidationErrorException validationErrors;
 
-        public CreatedArticleValidationErrors(CreatedArticleValidationErrors validationError, String message) {
+        public CreatedArticleValidationErrors(ValidationErrorException validationError, String message) {
             super(message);
             this.validationErrors = validationError;
         }
