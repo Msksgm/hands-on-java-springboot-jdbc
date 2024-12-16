@@ -3,7 +3,6 @@ CREATE TABLE public.articles (
     , title character varying NOT NULL
     , slug character varying NOT NULL
     , body text NOT NULL
-    , description character varying NOT NULL
 );
 
 -- PK
